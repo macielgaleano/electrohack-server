@@ -13,7 +13,7 @@ router.post("/data");
 
 router.post("/token/registro", authController.register);
 router.post("/token/login", authController.login);
-router.delete("/token", authController.delete);
+/*router.delete("/token", authController.delete);
 
 // PUBLICAS //
 
@@ -59,6 +59,6 @@ router.patch("/api/admin/productos", productController.updateImage);
 
 // PEDIDOS //
 
-router.put("/api/admin/pedidos", orderController.updateState);
+router.put("/api/admin/pedidos", orderController.updateState); */
 
 module.exports = router;
