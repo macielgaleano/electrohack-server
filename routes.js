@@ -54,9 +54,9 @@ router.use(checkJwt({ secret: process.env.SECRET, algorithms: ["HS256"] }));
 //PRODUCTOS //
 
 router.post("/api/admin/productos", productController.store);
-// router.put("/api/admin/productos", productController.update);
-// router.delete("/api/admin/productos", productController.delete);
-// router.patch("/api/admin/productos", productController.updateImage);
+router.put("/api/admin/productos", productController.update);
+router.delete("/api/admin/productos", productController.delete);
+router.patch("/api/admin/productos", productController.updateImage);
 
 // PEDIDOS //
 
