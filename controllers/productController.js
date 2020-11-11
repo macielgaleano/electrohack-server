@@ -139,20 +139,6 @@ const productController = {
     product.save();
     res.json(product);
   },
-
-  showCategories: async (req, res) => {
-    const categories = await Product.find({}).select("category");
-
-    console.log(categories);
-
-    for (let i = 0; i < categories.length; i++) {
-      console.log(categories.category[i]);
-      const category = categories.category[i];
-    }
-
-    return res.json();
-  },
-
   showByCategory: async (req, res) => {
     const products = Product.find({ category: req.body.category });
     res.json(products);

@@ -20,7 +20,7 @@ router.post("/token/login", authController.login);
 
 router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
-router.get("/productos/lista/categorias", productController.showCategories);
+router.get("/productos/lista/categorias", categoryController.show);
 router.get(
   "/productos/categorias/:categoria",
   productController.showByCategory
