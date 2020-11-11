@@ -35,4 +35,12 @@ module.exports = {
     });
     res.json("El usuario actualizó su contraseña");
   },
+  show: async (req, res) => {
+    const users = User.find({});
+    res.json(users);
+  },
+  /* VER QUE ONDA showOne: async (req, res) => {
+    const user = User.findOne({ email: req.body.email });
+    res.json(user);
+  }, */
 };

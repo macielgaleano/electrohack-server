@@ -35,7 +35,7 @@ router.use(checkJwt({ secret: process.env.SECRET, algorithms: ["HS256"] }));
 // PRIVADAS //
 
 // router.get("/api/usuarios", userController.show);
-// router.get("/api/usuarios/:id", userController.showById);
+// VER SI VALE LA PENA router.get("/api/usuarios/:id", userController.showOne);
 // router.post("/api/usuarios", userController.store);
 // router.put("/api/usuarios", userController.update);
 // router.put("/api/usuarios/password", userController.updatePassword);
