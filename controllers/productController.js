@@ -1,5 +1,27 @@
 const db = require("../models/index");
 const Product = require("../models/Product");
+const AWS = require("aws-sdk");
+const formidable = require("formidable");
+const path = require("path");
+const fs = require("fs");
+
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_ACCESS_ID,
+  secretAccessKey: process.env.AWS_ACCESS_SECRET,
+});
+
+var readOnlyAnonUserPolicy = {
+  Version: "2012-10-17",
+  Statement: [
+    {
+      Sid: "AddPerm",
+      Effect: "Allow",
+      Principal: "*",
+      Action: ["s3:GetObject"],
+      Resource: [""],
+    },
+  ],
+};
 
 const productController = {
   all: async (req, res) => {
@@ -8,7 +30,53 @@ const productController = {
   show: async (req, res) => {
     res.json(await Product.find({ slug: req.params.slug }));
   },
-  updateImage: (req, res) => {},
+  updateImage: (req, res) => {
+    let bucketResource = "arn:aws:s3:::" + process.env.AWS_BUCKET_NAME + "/*";
+    readOnlyAnonUserPolicy.Statement[0].Resource[0] = bucketResource;
+    let bucketPolicyParams = {
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Policy: JSON.stringify(readOnlyAnonUserPolicy),
+    };
+    s3.putBucketPolicy(bucketPolicyParams, function (err, data) {
+      if (err) {
+        res.status(500).json({ message: "Internal server error" + err });
+      } else {
+        console.log("Success");
+      }
+    });
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
+      if (err) res.status(500).json({ message: "Internal server error" + err });
+      else console.log("Bucket Created Successfully", data.Location);
+    });
+
+    const form = formidable({
+      multiples: true,
+      uploadDir: "./public/images",
+      keepExtensions: true,
+    });
+    form.parse(req, async (err, fields, files) => {
+      if (files) {
+        console.log(fields);
+        const imagen = "./public/images/" + path.basename(files.imagen.path);
+        const fileContent = fs.readFileSync(imagen);
+        const params = {
+          ACL: "public-read",
+          Bucket: process.env.AWS_BUCKET_NAME,
+          Key: path.basename(files.imagen.path),
+          ContentType: "image/jpeg",
+          Body: fileContent,
+        };
+        s3.upload(params, async function (err, data) {
+          const product = await Product.findOne({ slug: fields.slug });
+          product.pictures.push(await data.Location);
+          product.save();
+          return res.json({ status: 200, data: data.location });
+        });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    });
+  },
   update: async (req, res) => {
     let {
       name,
