@@ -4,6 +4,7 @@ const AWS = require("aws-sdk");
 const formidable = require("formidable");
 const path = require("path");
 const fs = require("fs");
+const Category = require("../models/Category");
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_ACCESS_ID,
@@ -44,7 +45,10 @@ const productController = {
         console.log("Success");
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
+      err,
+      data
+    ) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
@@ -137,7 +141,10 @@ const productController = {
     res.json(product);
   },
   showByCategory: async (req, res) => {
-    const products = await Product.find({ category: req.body.category });
+    const category = await Category.findOne({ name: req.body.category });
+    console.log(category);
+    console.log(req.body.category);
+    const products = await Product.find({ category: category._id });
     res.json(products);
   },
 };

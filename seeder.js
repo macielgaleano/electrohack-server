@@ -2,7 +2,7 @@ const db = require("./models/index");
 const Admin = require("./models/Admin");
 const Order = require("./models/Order");
 const Product = require("./models/Product");
-const Category = require("./models/Product");
+const Category = require("./models/Category");
 const User = require("./models/User");
 const faker = require("faker");
 faker.locale = "es";
@@ -28,7 +28,7 @@ const seeder = {
     let idCategories = [];
     let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
     for (let g = 0; g < categories.length; g++) {
-      const category = new Category({
+      const category = await new Category({
         name: categories[g],
       });
       idCategories.push(category._id);
@@ -50,7 +50,7 @@ const seeder = {
           faker.image.technics(),
         ],
         stock: faker.random.number(),
-        category: faker.random.arrayElement(idCategories),
+        category: faker.random.arrayElement(idCategories, 4),
         outstanding: faker.random.boolean(),
         slug: slugify(name),
       });

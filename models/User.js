@@ -9,6 +9,7 @@ const userSchema = new Schema(
     password: String,
     address: String,
     phone: String,
+    tokens: [],
     orders: [
       {
         type: Schema.Types.ObjectId,

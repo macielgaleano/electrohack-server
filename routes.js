@@ -15,6 +15,7 @@ router.get("/data", seeder.createData);
 
 router.post("/token/registro", authController.register);
 router.post("/token/login", authController.login);
+router.patch("/logout", authController.logout);
 // router.delete("/token", authController.delete);
 
 // PUBLICAS //

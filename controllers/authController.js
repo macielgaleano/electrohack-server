@@ -15,9 +15,10 @@ module.exports = {
         password: req.body.password,
         address: req.body.address,
         phone: req.body.phone,
+        tokens: [],
         orders: [],
       });
-      newUser.save();
+
       const token = jwt.sign(
         {
           id: newUser.id,
@@ -26,7 +27,8 @@ module.exports = {
         },
         process.env.SECRET
       );
-
+      newUser.tokens.push(token);
+      newUser.save();
       res
         .status(200)
         .json({ token: token, Exitoso: "Usuario creado correctamente" });
@@ -56,9 +58,17 @@ module.exports = {
           },
           process.env.SECRET
         );
+        user.tokens.push(token);
+        user.save();
 
         res.json({ token });
       }
     }
+  },
+  logout: async (req, res) => {
+    const user = await User.findOne({ email: req.body.email });
+    user.tokens = user.tokens.filter((token) => req.body.token !== token);
+    user.save();
+    res.json({ Exitoso: "Te deslogueaste correctamente" });
   },
 };
