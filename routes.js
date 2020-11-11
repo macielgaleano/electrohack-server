@@ -18,8 +18,8 @@ router.post("/token/login", authController.login);
 
 // PUBLICAS //
 
-router.get("/productos", productController.show);
-// router.get("/productos/:slug", productController.showBySlug);
+router.get("/productos", productController.all);
+router.get("/productos/:slug", productController.show);
 // router.get("/productos/categorias", productController.showCategories);
 // router.get(
 //   "/productos/categorias/:categoria",

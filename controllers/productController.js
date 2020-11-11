@@ -1,8 +1,9 @@
 const db = require("../models/index");
+const Product = require("../models/Product");
 
 const productController = {
-  show: (req, res) => {
-    res.json();
+  all: async (req, res) => {
+    res.json(await Product.find({}));
   },
 };
 
