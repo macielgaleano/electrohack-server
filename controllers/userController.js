@@ -17,5 +17,22 @@ module.exports = {
   },
   delete: async (req, res) => {
     await User.deleteOne({ email: req.body.email });
+    res.json("El usuario se eliminó correctamente");
+  },
+  update: async (req, res) => {
+    await User.findOneAndUpdate(id, {
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      address: req.body.address,
+      phone: req.body.phone,
+    });
+    res.json("El usuario se modificó correctamente");
+  },
+  updatePassword: async (req, res) => {
+    await User.findOneAndUpdate(id, {
+      password: req.body.password,
+    });
+    res.json("El usuario actualizó su contraseña");
   },
 };
