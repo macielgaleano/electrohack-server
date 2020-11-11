@@ -17,7 +17,7 @@ module.exports = {
   },
   delete: async (req, res) => {
     await User.deleteOne({ email: req.body.email });
-    res.json("El usuario se eliminó correctamente");
+    res.json({ Exitoso: "El usuario se eliminó correctamente" });
   },
   update: async (req, res) => {
     await User.findOneAndUpdate(id, {
@@ -36,7 +36,7 @@ module.exports = {
     res.json("El usuario actualizó su contraseña");
   },
   show: async (req, res) => {
-    const users = User.find({});
+    const users = await User.find({});
     res.json(users);
   },
   /* VER QUE ONDA showOne: async (req, res) => {
