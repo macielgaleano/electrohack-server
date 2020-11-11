@@ -1,9 +1,9 @@
-const mongoose = require("mongoose");
+const db = require("mongoose");
 
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useUnifiedTopology", true);
-mongoose.connect(process.env.DB_CONNECTION);
+db.set("useNewUrlParser", true);
+db.set("useUnifiedTopology", true);
+db.connect(process.env.DB_CONNECTION);
 
-mongoose.connection.once("open", () => console.log("conectado"));
+db.connection.once("open", () => console.log("conectado"));
 
-module.exports = { mongoose };
+module.exports = db;
