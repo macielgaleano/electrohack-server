@@ -10,7 +10,12 @@ const productSchema = new Schema(
     brand: String,
     pictures: [],
     stock: Number,
-    category: String,
+    category: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Category",
+      },
+    ],
     outstanding: Boolean,
     slug: "",
   },

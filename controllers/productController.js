@@ -44,7 +44,10 @@ const productController = {
         console.log("Success");
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
+      err,
+      data
+    ) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
@@ -138,11 +141,16 @@ const productController = {
   },
 
   showCategories: async (req, res) => {
-    const products = Product.find({});
-    console.log("anda");
-    products.map((product) => {
-      return product.category;
-    });
+    const categories = await Product.find({}).select("category");
+
+    console.log(categories);
+
+    for (let i = 0; i < categories.length; i++) {
+      console.log(categories.category[i]);
+      const category = categories.category[i];
+    }
+
+    return res.json();
   },
 
   showByCategory: async (req, res) => {
