@@ -20,11 +20,11 @@ router.post("/token/login", authController.login);
 
 router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
-// router.get("/productos/categorias", productController.showCategories);
-// router.get(
-//   "/productos/categorias/:categoria",
-//   productController.showByCategory
-// );
+router.get("/productos/category", productController.showCategories);
+router.get(
+  "/productos/categorias/:categoria",
+  productController.showByCategory
+);
 
 // MIDDLEWARE JWT //
 
@@ -54,9 +54,9 @@ router.use(checkJwt({ secret: process.env.SECRET, algorithms: ["HS256"] }));
 //PRODUCTOS //
 
 router.post("/api/admin/productos", productController.store);
-// router.put("/api/admin/productos", productController.update);
-// router.delete("/api/admin/productos", productController.delete);
-// router.patch("/api/admin/productos", productController.updateImage);
+router.put("/api/admin/productos", productController.update);
+router.delete("/api/admin/productos", productController.delete);
+router.patch("/api/admin/productos", productController.updateImage);
 
 // PEDIDOS //
 
