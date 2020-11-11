@@ -137,7 +137,7 @@ const productController = {
     res.json(product);
   },
   showByCategory: async (req, res) => {
-    const products = Product.find({ category: req.body.category });
+    const products = await Product.find({ category: req.body.category });
     res.json(products);
   },
 };
