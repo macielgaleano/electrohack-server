@@ -5,6 +5,7 @@ const orderController = require("./controllers/orderController");
 const productController = require("./controllers/productController");
 const userController = require("./controllers/userController");
 const adminController = require("./controllers/adminController");
+const categoryController = require("./controllers/categoryController");
 const checkJwt = require("express-jwt");
 const seeder = require("./seeder");
 
