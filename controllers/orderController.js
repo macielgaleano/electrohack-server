@@ -1,5 +1,4 @@
 const Order = require("../models/Order");
-const orderController = require("../models/Order");
 
 module.exports = {
   store: async (req, res) => {

@@ -20,7 +20,7 @@ router.post("/token/login", authController.login);
 
 router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
-router.get("/productos/category", productController.showCategories);
+router.get("/productos/lista/categorias", productController.showCategories);
 router.get(
   "/productos/categorias/:categoria",
   productController.showByCategory
@@ -37,7 +37,7 @@ router.use(checkJwt({ secret: process.env.SECRET, algorithms: ["HS256"] }));
 // router.post("/api/usuarios", userController.store);
 // router.put("/api/usuarios", userController.update);
 // router.put("/api/usuarios/password", userController.updatePassword);
-// router.delete("/api/usuarios", userController.delete);
+router.delete("/api/usuarios", userController.delete);
 // router.post("/api/pedidos", orderController.store);
 
 // MIDDLEWARE CHECK ADMIN //
