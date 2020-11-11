@@ -2,10 +2,12 @@ const db = require("./models/index");
 const Admin = require("./models/Admin");
 const Order = require("./models/Order");
 const Product = require("./models/Product");
+const Category = require("./models/Product");
 const User = require("./models/User");
 const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
+const { commerce } = require("faker");
 
 const seeder = {
   createData: async (req, res) => {
@@ -14,6 +16,7 @@ const seeder = {
     Order.collection.remove();
     Product.collection.remove();
     User.collection.remove();
+    Category.collection.remove();
     const adminUser = new Admin({
       firstname: "root",
       lastname: "root",
@@ -21,6 +24,16 @@ const seeder = {
       password: "1234",
     });
     adminUser.save();
+
+    let idCategories = [];
+    let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
+    for (let g = 0; g < categories.length; g++) {
+      const category = new Category({
+        name: categories[g],
+      });
+      idCategories.push(category._id);
+      category.save();
+    }
 
     //Crar productos
     let products = [];
@@ -37,10 +50,7 @@ const seeder = {
           faker.image.technics(),
         ],
         stock: faker.random.number(),
-        category: faker.random.arrayElement(
-          ["Celulares", "Computadoras", "Televisores", "Textil"],
-          4
-        ),
+        category: faker.random.arrayElement(idCategories),
         outstanding: faker.random.boolean(),
         slug: slugify(name),
       });

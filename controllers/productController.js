@@ -44,10 +44,7 @@ const productController = {
         console.log("Success");
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
-      err,
-      data
-    ) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
