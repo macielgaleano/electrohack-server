@@ -12,20 +12,16 @@ const productSchema = new Schema(
     stock: Number,
     category: String,
     outstanding: Boolean,
-    slug: String,
+    slug: "",
   },
   { timestamps: true }
 );
 
-adminSchema.pre("save", function (next) {
+productSchema.pre("save", function (next) {
   var user = this;
-  if (!user.isModified("slug")) return next();
-]
-      next();
-   
+  user.slug = slugify(user.name);
+  next();
 });
-
-productSchema.slug = slugify(productSchema.name);
 
 const Product = mongoose.model("Product", productSchema);
 
