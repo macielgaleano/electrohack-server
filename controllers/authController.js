@@ -2,7 +2,6 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const Admin = require("../models/Admin");
 const jwt = require("jsonwebtoken");
-const { findOne } = require("../models/User");
 
 module.exports = {
   register: async (req, res) => {
@@ -13,7 +12,7 @@ module.exports = {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         email: req.body.email,
-        password: hashedPassword,
+        password: req.body.password,
         address: req.body.address,
         phone: req.body.phone,
         orders: [],
@@ -28,7 +27,9 @@ module.exports = {
         process.env.SECRET
       );
 
-      res.status(200).json({ token: token, Exitoso: "Usuario creado correctamente" });
+      res
+        .status(200)
+        .json({ token: token, Exitoso: "Usuario creado correctamente" });
     } else {
       res.status(200).json({ Error: "El usuario ya existe" });
     }

@@ -68,6 +68,19 @@ const productController = {
     product.save();
     res.json(product);
   },
+
+  showCategories: async (req, res) => {
+    const products = Product.find({});
+    console.log("anda");
+    products.map((product) => {
+      return product.category;
+    });
+  },
+
+  showByCategory: async (req, res) => {
+    const products = Product.find({ category: req.body.category });
+    res.json(products);
+  },
 };
 
 module.exports = productController;
