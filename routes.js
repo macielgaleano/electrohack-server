@@ -15,8 +15,7 @@ router.get("/data", seeder.createData);
 
 router.post("/token/registro", authController.register);
 router.post("/token/login", authController.login);
-router.patch("/logout", authController.logout);
-// router.delete("/token", authController.delete);
+router.patch("/token/logout", authController.logout);
 
 // PUBLICAS //
 
@@ -34,13 +33,13 @@ router.use(checkJwt({ secret: process.env.SECRET, algorithms: ["HS256"] }));
 
 // PRIVADAS //
 
-// router.get("/api/usuarios", userController.show);
+router.get("/api/usuarios", userController.show);
 // VER SI VALE LA PENA router.get("/api/usuarios/:id", userController.showOne);
-// router.post("/api/usuarios", userController.store);
-// router.put("/api/usuarios", userController.update);
-// router.put("/api/usuarios/password", userController.updatePassword);
+router.post("/api/usuarios", userController.store);
+router.put("/api/usuarios", userController.update);
+router.put("/api/usuarios/password", userController.updatePassword);
 router.delete("/api/usuarios", userController.delete);
-// router.post("/api/pedidos", orderController.store);
+router.post("/api/pedidos", orderController.store);
 
 // MIDDLEWARE CHECK ADMIN //
 
@@ -48,10 +47,10 @@ router.delete("/api/usuarios", userController.delete);
 
 // ADMIN //
 
-// router.post("/api/admin", adminController.store);
-// router.delete("/api/admin", adminController.delete);
-// router.put("/api/admin/password", adminController.updatePassword);
-// router.put("/api/admin", adminController.update);
+router.post("/api/admin", adminController.store);
+router.delete("/api/admin", adminController.delete);
+router.put("/api/admin/password", adminController.updatePassword);
+router.put("/api/admin", adminController.update);
 
 //PRODUCTOS //
 
@@ -62,6 +61,6 @@ router.patch("/api/admin/productos", productController.updateImage);
 
 // PEDIDOS //
 
-// router.put("/api/admin/pedidos", orderController.updateState);
+router.put("/api/admin/pedidos", orderController.updateState);
 
 module.exports = router;
