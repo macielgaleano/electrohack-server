@@ -1,12 +1,12 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
+const Admin = require("../models/Admin");
 const jwt = require("jsonwebtoken");
 const { findOne } = require("../models/User");
 
 module.exports = {
   register: async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
     if (!user) {
       const newUser = new User({
@@ -28,16 +28,17 @@ module.exports = {
         process.env.SECRET
       );
 
-      res
-        .status(200)
-        .json({ token: token, Exitoso: "Usuario creado correctamente" });
+      res.status(200).json({ token: token, Exitoso: "Usuario creado correctamente" });
     } else {
       res.status(200).json({ Error: "El usuario ya existe" });
     }
   },
 
   login: async (req, res) => {
-    const user = await User.findOne({ email: req.body.email });
+    let user = await User.findOne({ email: req.body.email });
+    if (!user) {
+      user = await Admin.findOne({ email: req.body.email });
+    }
     if (!user) {
       res.json({ Error: "Datos incorrectos" });
     } else {
