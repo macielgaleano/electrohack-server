@@ -17,7 +17,6 @@ module.exports = {
   },
   delete: async (req, res) => {
     await User.deleteOne({ email: req.body.email });
-<<<<<<< Updated upstream
     res.json("El usuario se eliminó correctamente");
   },
   update: async (req, res) => {
@@ -35,8 +34,5 @@ module.exports = {
       password: req.body.password,
     });
     res.json("El usuario actualizó su contraseña");
-=======
-    res.json({ Exitoso: "El usuario se eliminó correctamente" });
->>>>>>> Stashed changes
   },
 };

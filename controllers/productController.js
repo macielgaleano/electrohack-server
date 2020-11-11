@@ -142,8 +142,6 @@ const productController = {
   },
   showByCategory: async (req, res) => {
     const category = await Category.findOne({ name: req.body.category });
-    console.log(category);
-    console.log(req.body.category);
     const products = await Product.find({ category: category._id });
     res.json(products);
   },
