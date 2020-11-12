@@ -7,7 +7,7 @@ const fetch = require("node-fetch");
 const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
-const axios = require("axios");
+let axios = require("axios");
 
 const seeder = {
   createData: async (req, res) => {
@@ -26,6 +26,10 @@ const seeder = {
     });
     adminUser.save();
 
+    let products = await axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => res.data);
+
     let idCategories = [];
     let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
     for (let g = 0; g < categories.length; g++) {
@@ -36,19 +40,12 @@ const seeder = {
       category.save();
     }
 
-    let products = await axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => res.data);
-
-    console.log(products);
+    let users = [];
+    let products_list = [];
 
     if (await products) {
       //Crar productos
-      console.log(products.length);
-      console.log(products.Promise);
-      products_list = [];
-      for (let i = 0; i < 20; i++) {
-        console.log(products[i].title);
+      for (let i = 0; i < products.length; i++) {
         let name = faker.commerce.productName();
         const product = new Product({
           name: products[i].title,
@@ -61,12 +58,11 @@ const seeder = {
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
-        console.log(product);
         products_list.push(product);
         await product.save();
       }
       //For create users
-      let users = [];
+
       for (let i = 0; i < 10; i++) {
         const user = new User({
           firstname: faker.name.firstName(),
@@ -93,8 +89,12 @@ const seeder = {
         users.push(user);
       }
 
-      res.json({ adminUser, users, products_list });
+      //For create users
     }
+
+    //Crar productos
+
+    res.json({ adminUser, users, products_list });
   },
 };
 
