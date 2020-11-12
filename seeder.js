@@ -37,15 +37,14 @@ const seeder = {
     }
 
     let products = await axios
-      .get("https://fakestoreapi.com/products/category/electronics/")
+      .get("https://fakestoreapi.com/products")
       .then((res) => res.data);
 
     console.log(products);
 
     if (await products) {
       //Crar productos
-      console.log(products.length);
-      console.log(products.Promise);
+
       products_list = [];
       for (let i = 0; i < 20; i++) {
         console.log(products[i].title);
@@ -61,7 +60,6 @@ const seeder = {
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
-        console.log(product);
         products_list.push(product);
         await product.save();
       }
