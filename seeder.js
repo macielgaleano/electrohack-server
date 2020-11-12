@@ -3,6 +3,7 @@ const Order = require("./models/Order");
 const Product = require("./models/Product");
 const Category = require("./models/Category");
 const User = require("./models/User");
+const fetch = require("node-fetch");
 const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
@@ -34,20 +35,20 @@ const seeder = {
       category.save();
     }
 
+    let products = fetch("https://fakestoreapi.com/products/1")
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+
     //Crar productos
     let products = [];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < products.length; i++) {
       let name = faker.commerce.productName();
       const product = new Product({
-        name: name,
-        description: faker.commerce.productDescription(),
-        price: faker.commerce.price(),
+        name: products[i].title,
+        description: products[i].description,
+        price: products[i].price,
         brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-        pictures: [
-          "https://conecta22222.s3.amazonaws.com/upload_1774951430c2d6592d39d6d801834c96.jpg",
-          faker.image.technics(),
-          faker.image.technics(),
-        ],
+        pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
         stock: faker.random.number(),
         category: faker.random.arrayElement(idCategories, 4),
         outstanding: faker.random.boolean(),
