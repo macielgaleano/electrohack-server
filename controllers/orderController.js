@@ -15,4 +15,9 @@ module.exports = {
     Order.findByIdAndUpdate(req.body.id, { state: req.body.state });
     res.json({ Exitoso: `El nuevo estado del pedido es: ${req.body.state}` });
   },
+
+  show: async (req, res) => {
+    const orders = await Order.find({});
+    res.json(orders);
+  },
 };
