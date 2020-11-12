@@ -1,6 +1,13 @@
 const Category = require("../models/Category");
 
 module.exports = {
+  store: (req, res) => {
+    let category = new Category({
+      name: req.body.name,
+    });
+    category.save();
+    res.json({});
+  },
   show: async (req, res) => {
     const categories = await Category.find({});
     return res.json(categories);

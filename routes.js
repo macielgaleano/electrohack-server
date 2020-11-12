@@ -58,6 +58,11 @@ router.delete("/api/admin", adminController.delete);
 router.put("/api/admin/password", adminController.updatePassword);
 router.put("/api/admin", adminController.update);
 
+//ADMIN CATEGORIAS
+router.post("/api/admin/categorias", categoryController.store);
+router.delete("api/admin/categorias", categoryController.delete);
+router.put("api/admin/categorias", categoryController.update);
+
 //PRODUCTOS //
 
 router.post("/api/admin/productos", productController.store);
