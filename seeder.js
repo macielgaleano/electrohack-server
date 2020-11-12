@@ -37,7 +37,7 @@ const seeder = {
     }
 
     let products = await axios
-      .get("https://fakestoreapi.com/products")
+      .get("https://fakestoreapi.com/products/category/electronics/")
       .then((res) => res.data);
 
     console.log(products);
