@@ -73,12 +73,12 @@ module.exports = {
     let admin = await Admin.findOne({ email: req.body.email });
 
     if (!admin) {
-      res.json({ Error: "Datos incorrectos" });
+      res.json({ Error: "Datos incorrectos1" });
     } else {
       const result = await bcrypt.compare(req.body.password, admin.password);
 
       if (!result) {
-        res.json({ Error: "Datos incorrectos" });
+        res.json({ Error: "Datos incorrectos2" });
       } else {
         const token = jwt.sign(
           {

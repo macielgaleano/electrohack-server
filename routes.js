@@ -18,9 +18,8 @@ router.post("/token/registro", authController.register);
 router.post("/token/login", authController.login);
 router.patch("/token/logout", authController.logout);
 
-router.post("/token/registro/admin", authController.register);
-router.post("/token/login/admin", authController.login);
-router.patch("/token/logout/admin", authController.logout);
+router.post("/token/login/admin", authController.adminLogin);
+router.patch("/token/logout/admin", authController.adminLogout);
 
 // PUBLICAS //
 
@@ -48,7 +47,6 @@ router.post("/api/pedidos", orderController.store);
 
 // MIDDLEWARE CHECK ADMIN //
 
-// aca iria el middleware que chequea si el usuario es admin //
 router.use(isAdmin);
 
 // ADMIN //
