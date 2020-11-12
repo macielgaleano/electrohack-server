@@ -36,10 +36,6 @@ const seeder = {
       category.save();
     }
 
-    let products = await axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => res.data);
-
     console.log(products);
 
     if (await products) {
