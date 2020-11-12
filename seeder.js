@@ -26,7 +26,9 @@ const seeder = {
     });
     adminUser.save();
 
-    let products = axios.get("https://fakestoreapi.com/products").then((res) => res.data);
+    let products = await axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => res.data);
 
     let idCategories = [];
     let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
@@ -43,25 +45,19 @@ const seeder = {
 
     if (await products) {
       //Crar productos
-      console.log(products);
       for (let i = 0; i < products.length; i++) {
         let name = faker.commerce.productName();
         const product = new Product({
-          name: products_list[i].title,
-          description: products_list[i].description,
-          price: products_list[i].price,
+          name: products[i].title,
+          description: products[i].description,
+          price: products[i].price,
           brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-          pictures: [
-            products_list[i].image,
-            faker.image.technics(),
-            faker.image.technics(),
-          ],
+          pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
           stock: faker.random.number(),
           category: faker.random.arrayElement(idCategories, 4),
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
-        console.log(product);
         products_list.push(product);
         await product.save();
       }
