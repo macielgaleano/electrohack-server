@@ -40,15 +40,19 @@ const seeder = {
       .then((json) => console.log(json));
 
     //Crar productos
-    let products = [];
-    for (let i = 0; i < products.length; i++) {
+    let products_list = [];
+    for (let i = 0; i < products_list.length; i++) {
       let name = faker.commerce.productName();
       const product = new Product({
-        name: products[i].title,
-        description: products[i].description,
-        price: products[i].price,
+        name: products_list[i].title,
+        description: products_list[i].description,
+        price: products_list[i].price,
         brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-        pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
+        pictures: [
+          products_list[i].image,
+          faker.image.technics(),
+          faker.image.technics(),
+        ],
         stock: faker.random.number(),
         category: faker.random.arrayElement(idCategories, 4),
         outstanding: faker.random.boolean(),
