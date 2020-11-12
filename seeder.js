@@ -7,6 +7,7 @@ const fetch = require("node-fetch");
 const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
+let axios = require("axios");
 
 const seeder = {
   createData: async (req, res) => {
@@ -25,6 +26,8 @@ const seeder = {
     });
     adminUser.save();
 
+    let products = axios.get("https://fakestoreapi.com/products").then((res) => res.data);
+
     let idCategories = [];
     let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
     for (let g = 0; g < categories.length; g++) {
@@ -35,29 +38,35 @@ const seeder = {
       category.save();
     }
 
+    let users = [];
+    let products_list = [];
+
     if (await products) {
       //Crar productos
-
-      products_list = [];
-      for (let i = 0; i < 20; i++) {
-        console.log(products[i].title);
+      console.log(products);
+      for (let i = 0; i < products.length; i++) {
         let name = faker.commerce.productName();
         const product = new Product({
-          name: products[i].title,
-          description: products[i].description,
-          price: products[i].price,
+          name: products_list[i].title,
+          description: products_list[i].description,
+          price: products_list[i].price,
           brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-          pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
+          pictures: [
+            products_list[i].image,
+            faker.image.technics(),
+            faker.image.technics(),
+          ],
           stock: faker.random.number(),
-          category: products[i].category,
+          category: faker.random.arrayElement(idCategories, 4),
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
+        console.log(product);
         products_list.push(product);
         await product.save();
       }
       //For create users
-      let users = [];
+
       for (let i = 0; i < 10; i++) {
         const user = new User({
           firstname: faker.name.firstName(),
@@ -79,63 +88,17 @@ const seeder = {
             order.save();
             user.orders.push(order);
           }
-          let products = fetch("https://fakestoreapi.com/products")
-            .then((res) => res.json())
-            .then((json) => console.log(json));
-
-          //Crar productos
-          let products_list = [];
-          for (let i = 0; i < products_list.length; i++) {
-            let name = faker.commerce.productName();
-            const product = new Product({
-              name: products_list[i].title,
-              description: products_list[i].description,
-              price: products_list[i].price,
-              brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-              pictures: [
-                products_list[i].image,
-                faker.image.technics(),
-                faker.image.technics(),
-              ],
-              stock: faker.random.number(),
-              category: faker.random.arrayElement(idCategories, 4),
-              outstanding: faker.random.boolean(),
-              slug: slugify(name),
-            });
-            products.push(product);
-            await product.save();
-          }
-          //For create users
-          let users = [];
-          for (let i = 0; i < 10; i++) {
-            const user = new User({
-              firstname: faker.name.firstName(),
-              lastname: faker.name.lastName(),
-              email: faker.internet.email(),
-              password: "1234",
-              address: faker.address.direction(),
-              phone: faker.phone.phoneNumber(),
-              orders: [],
-            });
-            let number = faker.random.arrayElement([0, 1, 2, 4, 5], 6);
-            if (number > 0) {
-              for (let u = 0; u < number; u++) {
-                const order = new Order({
-                  user: user._id,
-                  products: await Product.find({}).limit(6),
-                  state: "0",
-                });
-                order.save();
-                user.orders.push(order);
-              }
-            }
-            user.save();
-            users.push(user);
-          }
         }
+        user.save();
+        users.push(user);
       }
+
+      //For create users
     }
-    res.json({ adminUser, users, products });
+
+    //Crar productos
+
+    res.json({ adminUser, users, products_list });
   },
 };
 
