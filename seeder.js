@@ -56,7 +56,7 @@ const seeder = {
           brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
           pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
           stock: faker.random.number(),
-          category: faker.random.arrayElement(idCategories, 4),
+          category: products[i].category,
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
