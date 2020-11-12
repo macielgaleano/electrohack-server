@@ -8,6 +8,7 @@ const adminController = require("./controllers/adminController");
 const categoryController = require("./controllers/categoryController");
 const checkJwt = require("express-jwt");
 const seeder = require("./seeder");
+const { isAdmin } = require("./middlewares/isAdmin");
 
 // REGISTRO //
 
@@ -16,6 +17,10 @@ router.get("/data", seeder.createData);
 router.post("/token/registro", authController.register);
 router.post("/token/login", authController.login);
 router.patch("/token/logout", authController.logout);
+
+router.post("/token/registro/admin", authController.register);
+router.post("/token/login/admin", authController.login);
+router.patch("/token/logout/admin", authController.logout);
 
 // PUBLICAS //
 
@@ -44,6 +49,7 @@ router.post("/api/pedidos", orderController.store);
 // MIDDLEWARE CHECK ADMIN //
 
 // aca iria el middleware que chequea si el usuario es admin //
+router.use(isAdmin);
 
 // ADMIN //
 

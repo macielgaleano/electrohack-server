@@ -39,9 +39,7 @@ module.exports = {
 
   login: async (req, res) => {
     let user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      user = await Admin.findOne({ email: req.body.email });
-    }
+
     if (!user) {
       res.json({ Error: "Datos incorrectos" });
     } else {
@@ -69,6 +67,44 @@ module.exports = {
     const user = await User.findOne({ email: req.body.email });
     user.tokens = user.tokens.filter((token) => req.body.token !== token);
     user.save();
+    res.json({ Exitoso: "Te deslogueaste correctamente" });
+  },
+  adminLogin: async (req, res) => {
+    let admin = await Admin.findOne({ email: req.body.email });
+
+    if (!admin) {
+      res.json({ Error: "Datos incorrectos" });
+    } else {
+      const result = await bcrypt.compare(req.body.password, admin.password);
+
+      if (!result) {
+        res.json({ Error: "Datos incorrectos" });
+      } else {
+        const token = jwt.sign(
+          {
+            id: admin.id,
+            firstname: admin.firstname,
+            lastname: admin.lastname,
+          },
+          process.env.SECRET
+        );
+        admin.tokens.push(token);
+        admin.save();
+
+        res.json({ token });
+      }
+    }
+  },
+  adminLogout: async (req, res) => {
+    const admin = await Admin.findOne({ email: req.body.email });
+    admin.tokens = admin.tokens.filter((token) => req.body.token !== token);
+    admin.save();
+    res.json({ Exitoso: "Te deslogueaste correctamente" });
+  },
+  logout: async (req, res) => {
+    const admin = await Admin.findOne({ email: req.body.email });
+    admin.tokens = admin.tokens.filter((token) => req.body.token !== token);
+    admin.save();
     res.json({ Exitoso: "Te deslogueaste correctamente" });
   },
 };

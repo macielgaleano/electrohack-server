@@ -9,6 +9,8 @@ const adminSchema = new Schema(
     lastname: String,
     email: String,
     password: String,
+    active: Boolean,
+    tokens: [],
   },
   { timestamps: true }
 );

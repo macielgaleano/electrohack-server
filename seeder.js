@@ -1,4 +1,3 @@
-const db = require("./models/index");
 const Admin = require("./models/Admin");
 const Order = require("./models/Order");
 const Product = require("./models/Product");
@@ -7,7 +6,6 @@ const User = require("./models/User");
 const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
-const { commerce } = require("faker");
 
 const seeder = {
   createData: async (req, res) => {
@@ -20,6 +18,7 @@ const seeder = {
     const adminUser = new Admin({
       firstname: "root",
       lastname: "root",
+      active: true,
       email: "root@gmail.com",
       password: "1234",
     });
