@@ -31,7 +31,11 @@ module.exports = {
       newUser.save();
       res
         .status(200)
-        .json({ token: token, Exitoso: "Usuario creado correctamente" });
+        .json({
+          user: newUser,
+          token: token,
+          Exitoso: "Usuario creado correctamente",
+        });
     } else {
       res.status(200).json({ Error: "El usuario ya existe" });
     }
