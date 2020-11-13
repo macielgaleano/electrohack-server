@@ -44,7 +44,7 @@ router.put("/api/usuarios", userController.update);
 router.put("/api/usuarios/password", userController.updatePassword);
 router.delete("/api/usuarios", userController.delete);
 router.post("/api/pedidos", orderController.store);
-router.get("/api/pedidos", orderController.show);
+//router.get("/api/pedidos", orderController.show);
 
 // MIDDLEWARE CHECK ADMIN //
 
