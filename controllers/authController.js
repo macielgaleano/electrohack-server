@@ -59,7 +59,7 @@ module.exports = {
         user.tokens.push(token);
         user.save();
 
-        res.json({ token });
+        res.json({ token, user });
       }
     }
   },
@@ -101,7 +101,7 @@ module.exports = {
     admin.save();
     res.json({ Exitoso: "Te deslogueaste correctamente" });
   },
-  logout: async (req, res) => {
+  adminLogout: async (req, res) => {
     const admin = await Admin.findOne({ email: req.body.email });
     admin.tokens = admin.tokens.filter((token) => req.body.token !== token);
     admin.save();
