@@ -2,7 +2,7 @@ const Order = require("../models/Order");
 
 module.exports = {
   store: async (req, res) => {
-    const newOrder = new Order({
+    const newOrder = await new Order({
       state: "Sin pagar",
       products: req.body.products,
       user: req.user.id,
