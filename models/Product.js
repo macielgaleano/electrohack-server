@@ -23,7 +23,7 @@ const productSchema = new Schema(
 
 productSchema.pre("save", function (next) {
   var user = this;
-  user.slug = slugify(user.name);
+  user.slug = slugify(user.name).toLowerCase().repalace("/,.=+[]{}<>/g", "");
   next();
 });
 
