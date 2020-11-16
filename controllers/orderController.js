@@ -2,11 +2,11 @@ const Order = require("../models/Order");
 
 module.exports = {
   store: async (req, res) => {
-    const newOrder = {
+    const newOrder = new Order({
       state: "Sin pagar",
       products: req.body.products,
-      user: req.user,
-    };
+      user: req.user.id,
+    });
     newOrder.save();
     res.json({ Exitoso: "Orden creada correctamente" });
   },
