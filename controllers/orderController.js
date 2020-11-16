@@ -5,7 +5,7 @@ module.exports = {
     const newOrder = {
       state: "Sin pagar",
       products: req.body.products,
-      user: req.body.id,
+      user: req.user,
     };
     newOrder.save();
     res.json({ Exitoso: "Orden creada correctamente" });
