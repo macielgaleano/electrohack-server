@@ -20,15 +20,21 @@ module.exports = {
     res.json({ Exitoso: "El usuario se eliminó correctamente" });
   },
   update: async (req, res) => {
-    console.log(req.user.id);
-    await User.findOneAndUpdate(id, {
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      email: req.body.email,
-      address: req.body.address,
-      phone: req.body.phone,
-    });
-    res.json("El usuario se modificó correctamente");
+    try {
+      let user = await User.findOneAndUpdate(req.user.id, {
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        address: req.body.address,
+        phone: req.body.phone,
+      });
+      res.json({
+        messague: "El usuario se modificó correctamente",
+        user: user,
+      });
+    } catch (error) {
+      res.status(500).json(error);
+    }
   },
   updatePassword: async (req, res) => {
     await User.findOneAndUpdate(id, {
