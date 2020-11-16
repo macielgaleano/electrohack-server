@@ -1,5 +1,8 @@
 const db = require("../models/index");
 const Product = require("../models/Product");
+const algoliasearch = require("algoliasearch");
+const client = algoliasearch("PW7Q8HCMTL", "4eadc8f72bc64cbf48d67887005cb3c1");
+const index = client.initIndex("test_MOVIES");
 const AWS = require("aws-sdk");
 const formidable = require("formidable");
 const path = require("path");
@@ -29,7 +32,9 @@ const productController = {
     console.log(req.query);
 
     if (!req.query) {
-      res.json(await Product.find({}));
+      let = await Product.find({});
+
+      res.json(products);
     } else if (req.query.outstading === "false") {
       res.json(await Product.find({ outstanding: false }));
     } else if (req.query.outstading === "true") {
