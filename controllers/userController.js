@@ -21,14 +21,14 @@ module.exports = {
   },
   update: async (req, res) => {
     try {
-      await User.findOneAndUpdate(req.user.id, {
+      let user = await User.findOneAndUpdate(req.user.id, {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         email: req.body.email,
         address: req.body.address,
         phone: req.body.phone,
       });
-      res.json("El usuario se modificó correctamente");
+      res.json({ messague: "El usuario se modificó correctamente", user: user });
     } catch (error) {
       res.status(500).json(error);
     }
