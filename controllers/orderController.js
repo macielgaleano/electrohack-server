@@ -8,7 +8,7 @@ module.exports = {
       user: req.user.id,
     });
     newOrder.save();
-    res.json({ Exitoso: "Orden creada correctamente" });
+    res.json({ Exitoso: "Orden creada correctamente", newOrder: newOrder });
   },
 
   updateState: async (req, res) => {
