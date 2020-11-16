@@ -5,7 +5,7 @@ module.exports = {
     const newOrder = await new Order({
       state: "Sin pagar",
       products: req.body.products,
-      user: req.user.id,
+      user: req.body.id,
     });
     newOrder.save();
     res.json({ Exitoso: "Orden creada correctamente", newOrder: newOrder });
@@ -17,7 +17,7 @@ module.exports = {
   },
 
   show: async (req, res) => {
-    const orders = await Order.find({});
-    res.json(orders);
+    const orders = await Order.find({}).populate("products");
+    return res.json(orders);
   },
 };
