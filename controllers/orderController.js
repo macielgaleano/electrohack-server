@@ -9,7 +9,7 @@ module.exports = {
       user: req.user.id,
     });
     newOrder.save();
-    const changedUser = await User.findOne({ id: newOrder.user });
+    const changedUser = await User.findOne({ _id: newOrder.user });
     changedUser.orders.push(newOrder.id);
     changedUser.save();
     res.json({ Exitoso: "Orden creada correctamente", newOrder: newOrder });
