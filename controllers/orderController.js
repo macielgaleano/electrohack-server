@@ -13,7 +13,7 @@ module.exports = {
     const changedUser = await User.findOne({ _id: newOrder.user });
     changedUser.orders.push(newOrder.id);
     changedUser.save();
-
+    //
     newOrder.products.forEach(async (el) => {
       let product_aux = await Product.findById(el._id);
       if (await product_aux) {
