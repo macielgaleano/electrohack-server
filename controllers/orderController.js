@@ -6,7 +6,7 @@ module.exports = {
     const newOrder = await new Order({
       state: "Sin pagar",
       products: req.body.products,
-      user: req.body.id,
+      user: req.user.id,
     });
     newOrder.save();
     const changedUser = await User.findOne({ id: newOrder.user });
