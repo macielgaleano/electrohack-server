@@ -78,9 +78,13 @@ const seeder = {
           for (let u = 0; u < number; u++) {
             const order = new Order({
               user: user._id,
-              products: await Product.find({}).limit(6),
-              state: "0",
+              products: [],
+              state: "Sin pagar",
             });
+            order.products.push({ product: products_list[0], quantity: 2 });
+            order.products.push({ product: products_list[0], quantity: 3 });
+            order.products.push({ product: products_list[0], quantity: 4 });
+
             order.save();
             user.orders.push(order);
           }
