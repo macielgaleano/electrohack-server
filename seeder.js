@@ -81,10 +81,13 @@ const seeder = {
               products: [],
               state: "Sin pagar",
             });
-            order.products.push({ product: products_list[0], quantity: 2 });
-            order.products.push({ product: products_list[0], quantity: 3 });
-            order.products.push({ product: products_list[0], quantity: 4 });
-
+            let product_aux = { ...products_list[0]._doc };
+            product_aux.quantity = 2;
+            order.products.push(product_aux);
+            product_aux = { ...products_list[1]._doc };
+            product_aux.quantity = 3;
+            order.products.push(product_aux);
+            console.log(order);
             order.save();
             user.orders.push(order);
           }

@@ -1,5 +1,6 @@
 const Order = require("../models/Order");
 const User = require("../models/User");
+const Product = require("../models/Product");
 
 module.exports = {
   store: async (req, res) => {
@@ -12,6 +13,15 @@ module.exports = {
     const changedUser = await User.findOne({ _id: newOrder.user });
     changedUser.orders.push(newOrder.id);
     changedUser.save();
+
+    newOrder.products.forEach(async (el) => {
+      let product_aux = await Product.findById(el._id);
+      if (await product_aux) {
+        product_aux.stock = product_aux.stock - el.quantity;
+        product_aux.save();
+      }
+    });
+
     res.json({ Exitoso: "Orden creada correctamente", newOrder: newOrder });
   },
 
