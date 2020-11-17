@@ -13,8 +13,6 @@ const { allowCrossDomain } = require("./middlewares/isCors");
 
 // REGISTRO //
 
-router.use(allowCrossDomain);
-
 router.get("/data", seeder.createData);
 
 router.post("/token/registro", authController.register);
