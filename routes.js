@@ -9,8 +9,11 @@ const categoryController = require("./controllers/categoryController");
 const checkJwt = require("express-jwt");
 const seeder = require("./seeder");
 const { isAdmin } = require("./middlewares/isAdmin");
+const { allowCrossDomain } = require("./middlewares/cors");
 
 // REGISTRO //
+
+router.use(allowCrossDomain);
 
 router.get("/data", seeder.createData);
 
