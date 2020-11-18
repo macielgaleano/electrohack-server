@@ -1,6 +1,8 @@
 [
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201136/ppal-desktop-1x.jpg"
+    ],
     "name": "TV LED PANAVOX 24D3663",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 5450,
@@ -11,7 +13,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201156/principal-lg-1x.jpg"
+    ],
     "name": "TV SMART PANAVOX 32 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB, VGA.",
     "price": 7550,
@@ -22,7 +26,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
+    ],
     "name": "TV SMART PANAVOX 58UHD X51",
     "description": "TV monitor LED SMART Ultra HD, HDR, Salida y entrada de audio por bluetooth",
     "price": 21450,
@@ -33,7 +39,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
+    ],
     "name": "TV SMART PANAVOX 65UHD X51",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 30500,
@@ -44,7 +52,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
+    ],
     "name": "TV SMART PANAVOX 43 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB.",
     "price": 11990,
@@ -55,7 +65,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
+    ],
     "name": "TV SMART PANAVOX 50UHD X51",
     "description": "TV monitor LED SMART Ultra HD con entradas HDR, Audio Bluetooth.",
     "price": 18350,
@@ -66,7 +78,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205189/principal-lg-1x.jpg"
+    ],
     "name": "Celular HUAWEI Y55P DRA-LX9",
     "description": "DUAL SIM, Cámara 8 MP, Pantalla 5.45",
     "price": 5250,
@@ -77,7 +91,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205180/principal-lg-1x.jpg"
+    ],
     "name": "Celular MOTOROLA MOTO E6 PLAY",
     "description": "DUAL SIM, Cámara 13 MP, Pantalla 5.5",
     "price": 5790,
@@ -88,7 +104,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205179/principal-lg-1x.jpg"
+    ],
     "name": "Celular LG K40 DS X 420",
     "description": "DUAL SIM, Cámara 16 MP, Pantalla 5.7",
     "price": 6250,
@@ -99,7 +117,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205172/principal-lg-1x.jpg"
+    ],
     "name": "Celular XIAOMI REDMI 8 32GB",
     "description": "DUAL SIM, Cámara 12 MP, Pantalla 6.2",
     "price": 8290,
@@ -110,7 +130,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205177/principal-lg-1x.jpg"
+    ],
     "name": "Celular XIAOMI REDMI NOTE 9S 128GB",
     "description": "DUAL SIM, Cámara 48+8+5+2 MP, Pantalla 6.67",
     "price": 14950,
@@ -121,7 +143,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205190/principal-lg-1x.jpg"
+    ],
     "name": "Celular HUAWEI P40 LITE JNY-LX2",
     "description": "DUAL SIM, Cámara 48+8+2+2 MP, Pantalla 6.4",
     "price": 15350,
@@ -132,7 +156,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205194/principal-lg-1x.jpg"
+    ],
     "name": "Celular MOTOROLA PLUS G9 XT2087-1 128GB",
     "description": "DUAL SIM, Cámara 48+8+2+2 MP, Pantalla 6.81",
     "price": 16450,
@@ -143,7 +169,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/205150/principal-lg-1x.jpg"
+    ],
     "name": "Celular APPLE IPHONE 8 A1905 64GB",
     "description": "Cámara 12 MP, Pantalla 4.7, Lector de huella dactilar",
     "price": 36990,
@@ -154,7 +182,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31674/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK HP 14-CM0132LA",
     "description": "Procesador AMD E2-9000, Disco duro 1TB, 4GB RAM, Windows 10",
     "price": 16950,
@@ -165,7 +195,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31659/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK LENOVO IDEAPAD S145-15IGM 500GB",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 18890,
@@ -176,7 +208,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31662/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ACER A315-34-C7BT-ES",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 19250,
@@ -187,7 +221,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31664/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ASUS X543MA-GQ443T",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 21495,
@@ -198,7 +234,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31675/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ASUS X509JA-BR638T",
     "description": "Procesador INTEL CORE I3, Disco duro SSD 128, 4GB RAM, Windows 10",
     "price": 25785,
@@ -209,7 +247,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31665/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ASUS X543UA-GO3148T",
     "description": "Procesador INTEL CORE I3, Disco duro HDD 1TB, 4GB RAM, Windows 10",
     "price": 29850,
@@ -220,7 +260,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31663/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ACER A315-56-38-EY",
     "description": "Procesador INTEL CORE I3, Disco duro HDD 1TB, 4GB RAM, Windows 10",
     "price": 29990,
@@ -231,7 +273,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31669/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK ACER A315-56-50-9T-ES",
     "description": "Procesador INTEL CORE I5, Disco duro SDD 256GB, 8GB RAM, Windows 10",
     "price": 35745,
