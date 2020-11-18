@@ -31,7 +31,7 @@ module.exports = {
   },
 
   show: async (req, res) => {
-    const orders = await Order.find({}).populate("products");
+    const orders = await Order.find({});
     return res.json(orders);
   },
 };
