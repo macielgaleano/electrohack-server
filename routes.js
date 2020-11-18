@@ -10,9 +10,11 @@ const checkJwt = require("express-jwt");
 const seeder = require("./seeder");
 const { isAdmin } = require("./middlewares/isAdmin");
 const { allowCrossDomain } = require("./middlewares/isCors");
+const algolia = require("./algolia");
 
 // REGISTRO //
 
+router.get("/algolia", algolia.getData);
 router.get("/data", seeder.createData);
 
 router.post("/token/registro", authController.register);

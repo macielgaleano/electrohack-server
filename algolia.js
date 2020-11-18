@@ -1,3 +1,22 @@
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("PW7Q8HCMTL", "4eadc8f72bc64cbf48d67887005cb3c1");
-const index = client.initIndex("test_MOVIES");
+const client = algoliasearch("CKVUOZDP79", "61cafd3708c4b9032a72653784b75694");
+const index = client.initIndex("electrohack");
+const Products = require("./models/Product");
+
+module.exports = {
+  getData: async (req, res) => {
+    let products = await Products.find({});
+    try {
+      if (await products) {
+        index
+          .saveObjects(products, { autoGenerateObjectIDIfNotExist: true })
+          .then(({ productsIDs }) => {
+            console.log(productsIDs);
+          });
+        res.json(products);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
