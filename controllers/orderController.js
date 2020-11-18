@@ -36,4 +36,9 @@ module.exports = {
     const orders = await Order.find({ user: req.user.id });
     return res.json(orders);
   },
+
+  showAll: async (req, res) => {
+    const orders = await Order.find({});
+    return res.json(orders);
+  },
 };
