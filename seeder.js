@@ -8,6 +8,8 @@ const faker = require("faker");
 faker.locale = "es";
 var slugify = require("slugify");
 let axios = require("axios");
+const productsJson = require("./products.json");
+const { find } = require("./models/Order");
 
 const seeder = {
   createData: async (req, res) => {
@@ -26,12 +28,10 @@ const seeder = {
     });
     adminUser.save();
 
-    let products = await axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => res.data);
+    let products = productsJson;
 
     let idCategories = [];
-    let categories = ["Celulares", "Computadoras", "Televisores", "Textil"];
+    let categories = ["Celulares", "Computadoras", "Televisores", "Cocina"];
     for (let g = 0; g < categories.length; g++) {
       const category = await new Category({
         name: categories[g],
@@ -45,16 +45,29 @@ const seeder = {
 
     if (await products) {
       //Crar productos
+
       for (let i = 0; i < products.length; i++) {
+        const categories = await Category.find({});
         let name = faker.commerce.productName();
+        async function category() {
+          for (let g = 0; g < categories.length; g++) {
+            console.log(products[i].category, categories[g].name);
+            if (products[i].category === categories[g].name) {
+              console.log(categories[g]._id);
+              return categories[g]._id;
+            }
+          }
+        }
+        category();
+
         const product = new Product({
-          name: products[i].title,
+          name: products[i].name,
           description: products[i].description,
           price: products[i].price,
-          brand: faker.random.arrayElement(["Samsung", "Apple", "LG", "Nike"], 4),
-          pictures: [products[i].image, faker.image.technics(), faker.image.technics()],
-          stock: faker.random.number(),
-          category: faker.random.arrayElement(idCategories, 4),
+          brand: products[i].brand,
+          pictures: products[i].pictures,
+          stock: products[i].stock,
+          category: await category(),
           outstanding: faker.random.boolean(),
           slug: slugify(name),
         });
@@ -87,7 +100,6 @@ const seeder = {
             product_aux = { ...products_list[1]._doc };
             product_aux.quantity = 3;
             order.products.push(product_aux);
-            console.log(order);
             order.save();
             user.orders.push(order);
           }

@@ -3,12 +3,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201136/ppal-desktop-1x.jpg"
     ],
-    "name": "TV LED PANAVOX 24D3663",
+    "name": "TV LED PANABOX 24D3663",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 5450,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": true,
     "slug": ""
   },
@@ -16,12 +16,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201156/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANAVOX 32 JMM59",
+    "name": "TV SMART PANABOX 32 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB, VGA.",
     "price": 7550,
     "brand": "",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": true,
     "slug": ""
   },
@@ -29,12 +29,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANAVOX 58UHD X51",
+    "name": "TV SMART PANABOX 58UHD X51",
     "description": "TV monitor LED SMART Ultra HD, HDR, Salida y entrada de audio por bluetooth",
     "price": 21450,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": true,
     "slug": ""
   },
@@ -42,12 +42,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANAVOX 65UHD X51",
+    "name": "TV SMART PANABOX 65UHD X51",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 30500,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": true,
     "slug": ""
   },
@@ -55,12 +55,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANAVOX 43 JMM59",
+    "name": "TV SMART PANABOX 43 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB.",
     "price": 11990,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": false,
     "slug": ""
   },
@@ -68,12 +68,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANAVOX 50UHD X51",
+    "name": "TV SMART PANABOX 50UHD X51",
     "description": "TV monitor LED SMART Ultra HD con entradas HDR, Audio Bluetooth.",
     "price": 18350,
-    "brand": "PANAVOX",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3a",
+    "category": "Televisores",
     "outstanding": false,
     "slug": ""
   },
@@ -86,7 +86,7 @@
     "price": 5250,
     "brand": "HUAWEI",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -99,7 +99,7 @@
     "price": 5790,
     "brand": "MOTOROLA",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -112,7 +112,7 @@
     "price": 6250,
     "brand": "LG",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -125,7 +125,7 @@
     "price": 8290,
     "brand": "XIAOMI",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -138,7 +138,7 @@
     "price": 14950,
     "brand": "XIAOMI",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -151,7 +151,7 @@
     "price": 15350,
     "brand": "HUAWEI",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": false,
     "slug": ""
   },
@@ -164,7 +164,7 @@
     "price": 16450,
     "brand": "MOTOROLA",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": false,
     "slug": ""
   },
@@ -177,7 +177,7 @@
     "price": 36990,
     "brand": "APPLE",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad38",
+    "category": "Celulares",
     "outstanding": true,
     "slug": ""
   },
@@ -190,7 +190,7 @@
     "price": 16950,
     "brand": "HP",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -203,7 +203,7 @@
     "price": 18890,
     "brand": "LENOVO",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -216,7 +216,7 @@
     "price": 19250,
     "brand": "ACER",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -229,7 +229,7 @@
     "price": 21495,
     "brand": "ASUS",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -242,7 +242,7 @@
     "price": 25785,
     "brand": "ASUS",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -255,7 +255,7 @@
     "price": 29850,
     "brand": "ASUS",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -268,7 +268,7 @@
     "price": 29990,
     "brand": "ACER",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -281,7 +281,7 @@
     "price": 35745,
     "brand": "ACER",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -294,7 +294,7 @@
     "price": 54250,
     "brand": "HP",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad39",
+    "category": "Computadoras",
     "outstanding": true,
     "slug": ""
   },
@@ -302,12 +302,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80447/principal2-lg-1x.jpg"
     ],
-    "name": "MICROONDAS PANAVOX EXPRESS 25N",
+    "name": "MICROONDAS PANABOX EXPRESS 25N",
     "description": "Digital con 11 niveles de potencia",
     "price": 3260,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   },
@@ -315,12 +315,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80446/principal-lg-1x.jpg"
     ],
-    "name": "MICROONDAS PANAVOX INOX 25",
+    "name": "MICROONDAS PANABOX INOX 25",
     "description": "Digital, acero inoxidable con 5 niveles de potencia",
     "price": 3695,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   },
@@ -328,12 +328,12 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80524/principal-lg-1x.jpg"
     ],
-    "name": "HORNO ELECTRICO PANAVOX INOX 35",
+    "name": "HORNO ELECTRICO PANABOX INOX 35",
     "description": "Grill, timer de 90 miniutos",
     "price": 2395,
-    "brand": "Panavox",
+    "brand": "PANABOX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   },
@@ -344,9 +344,9 @@
     "name": "COCINA BRONX ETNA",
     "description": "Cuatro hornallas, horno supergas, mesada de acero inoxidable",
     "price": 3395,
-    "brand": "Bronx",
+    "brand": "BRONX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   },
@@ -357,9 +357,9 @@
     "name": "COCINA BRONX OLIVA INOX",
     "description": "Cuatro hornallas, horno a supergas, frente y mesada de acero inoxidable",
     "price": 5160,
-    "brand": "Bronx",
+    "brand": "BRONX",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   },
@@ -370,9 +370,9 @@
     "name": "FREIDORA SIN ACEITE MONDIAL AF-03",
     "description": "Sin aceite, potencia 1500W, capacidad 3200ml",
     "price": 4250,
-    "brand": "Mondial",
+    "brand": "MONDIAL",
     "stock": 100,
-    "category": "5fb4080642e0c11004c8ad3b",
+    "category": "Cocina",
     "outstanding": true,
     "slug": ""
   }
