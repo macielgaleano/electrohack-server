@@ -286,7 +286,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/31667/principal-lg-1x.jpg"
+    ],
     "name": "NOTEBOOCK HP 15-DA0012LA",
     "description": "Procesador INTEL CORE I7, Disco duro HDD 1TB, 8GB RAM, Windows 10",
     "price": 54250,
@@ -297,7 +299,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/80447/principal2-lg-1x.jpg"
+    ],
     "name": "MICROONDAS PANAVOX EXPRESS 25N",
     "description": "Digital con 11 niveles de potencia",
     "price": 3260,
@@ -308,7 +312,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/80446/principal-lg-1x.jpg"
+    ],
     "name": "MICROONDAS PANAVOX INOX 25",
     "description": "Digital, acero inoxidable con 5 niveles de potencia",
     "price": 3695,
@@ -319,7 +325,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/80524/principal-lg-1x.jpg"
+    ],
     "name": "HORNO ELECTRICO PANAVOX INOX 35",
     "description": "Grill, timer de 90 miniutos",
     "price": 2395,
@@ -330,7 +338,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/34956/principal-lg-1x.jpg"
+    ],
     "name": "COCINA BRONX ETNA",
     "description": "Cuatro hornallas, horno supergas, mesada de acero inoxidable",
     "price": 3395,
@@ -341,7 +351,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/34951/principal2-lg-1x.jpg"
+    ],
     "name": "COCINA BRONX OLIVA INOX",
     "description": "Cuatro hornallas, horno a supergas, frente y mesada de acero inoxidable",
     "price": 5160,
@@ -352,7 +364,9 @@
     "slug": ""
   },
   {
-    "pictures": [],
+    "pictures": [
+      "https://api.carlosgutierrez.com.uy/fotos/fotos/20725/principal-lg-1x.jpg"
+    ],
     "name": "FREIDORA SIN ACEITE MONDIAL AF-03",
     "description": "Sin aceite, potencia 1500W, capacidad 3200ml",
     "price": 4250,
