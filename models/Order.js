@@ -6,6 +6,7 @@ const orderSchema = new Schema(
     user: [{ type: Schema.Types.ObjectId, ref: "User" }],
     products: [],
     state: String,
+    total: Number,
   },
   { timestamps: true }
 );

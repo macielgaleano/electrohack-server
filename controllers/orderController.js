@@ -8,6 +8,7 @@ module.exports = {
       state: "Sin pagar",
       products: req.body.products,
       user: req.user.id,
+      total: req.body.total,
     });
     newOrder.save();
     const changedUser = await User.findOne({ _id: newOrder.user });
