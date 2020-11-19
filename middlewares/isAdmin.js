@@ -1,9 +1,11 @@
 const Admin = require("../models/Admin");
 
 module.exports = {
-  isAdmin(req, res, next) {
+  isAdmin: async (req, res, next) => {
+    console.log(req.user);
     if (req.user.id) {
-      const admin = Admin.findOne({ id: req.user.id });
+      const admin = await Admin.findById(req.user.id);
+      console.log(admin);
       if (admin.active) {
         next();
       } else {

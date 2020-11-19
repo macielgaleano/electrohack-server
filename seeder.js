@@ -51,9 +51,7 @@ const seeder = {
         let name = faker.commerce.productName();
         async function category() {
           for (let g = 0; g < categories.length; g++) {
-            console.log(products[i].category, categories[g].name);
             if (products[i].category === categories[g].name) {
-              console.log(categories[g]._id);
               return categories[g]._id;
             }
           }
