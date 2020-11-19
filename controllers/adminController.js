@@ -30,4 +30,8 @@ module.exports = {
     });
     res.json("El admin actualizó su contraseña");
   },
+  show: async (req, res) => {
+    const admin = await Admin.find({});
+    res.json(admin);
+  },
 };

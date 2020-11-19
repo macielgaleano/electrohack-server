@@ -29,7 +29,10 @@ router.patch("/token/logout/admin", authController.adminLogout);
 router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
 router.get("/productos/lista/categorias", categoryController.show);
-router.get("/productos/categorias/:categoria", productController.showByCategory);
+router.get(
+  "/productos/categorias/:categoria",
+  productController.showByCategory
+);
 router.get("/ordenes/mes", productController.groupByDate);
 
 // MIDDLEWARE JWT //
@@ -58,6 +61,7 @@ router.post("/api/admin", adminController.store);
 router.delete("/api/admin", adminController.delete);
 router.put("/api/admin/password", adminController.updatePassword);
 router.put("/api/admin", adminController.update);
+router.get("/api/admin", adminController.show);
 
 //ADMIN CATEGORIAS
 router.post("/api/admin/categorias", categoryController.store);
