@@ -20,7 +20,6 @@ module.exports = {
     res.json({ Exitoso: "El usuario se eliminó correctamente" });
   },
   update: async (req, res) => {
-    console.log(req.user);
     try {
       let user = await User.findOneAndUpdate(req.user.id, {
         firstname: req.body.firstname,
