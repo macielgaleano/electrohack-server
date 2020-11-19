@@ -32,7 +32,6 @@ module.exports = {
   },
 
   show: async (req, res) => {
-    console.log(req.user.id);
     const orders = await Order.find({ user: req.user.id });
     return res.json(orders);
   },

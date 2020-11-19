@@ -10,13 +10,9 @@ module.exports = {
       if (await products) {
         index
           .saveObjects(products, { autoGenerateObjectIDIfNotExist: true })
-          .then(({ productsIDs }) => {
-            console.log(productsIDs);
-          });
+          .then(({ productsIDs }) => {});
         res.json(products);
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   },
 };

@@ -29,8 +29,6 @@ var readOnlyAnonUserPolicy = {
 
 const productController = {
   all: async (req, res) => {
-    console.log(req.query);
-
     if (!req.query) {
       let = await Product.find({});
 
@@ -67,7 +65,6 @@ const productController = {
       if (err) {
         res.status(500).json({ message: "Internal server error" + err });
       } else {
-        console.log("Success");
       }
     });
     s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
@@ -85,7 +82,6 @@ const productController = {
     });
     form.parse(req, async (err, fields, files) => {
       if (files) {
-        console.log(fields);
         const imagen = "./public/images/" + path.basename(files.imagen.path);
         const fileContent = fs.readFileSync(imagen);
         const params = {
@@ -134,7 +130,8 @@ const productController = {
   },
   delete: async (req, res) => {
     if (req.body.slug) {
-      Product.deleteOne({ slug: req.body.slug });
+      const deletedProduct = await Product.deleteOne({ slug: req.body.slug });
+      console.log(deletedProduct);
       res.status(200).json({ messague: "Producto eliminado" });
     } else {
       res.status(401).json({ status: 401, error: "No existe el producto" });
