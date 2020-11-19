@@ -30,6 +30,7 @@ router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
 router.get("/productos/lista/categorias", categoryController.show);
 router.get("/productos/categorias/:categoria", productController.showByCategory);
+router.get("/ordenes/mes", productController.groupByDate);
 
 // MIDDLEWARE JWT //
 
