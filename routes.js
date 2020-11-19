@@ -29,7 +29,10 @@ router.patch("/token/logout/admin", authController.adminLogout);
 router.get("/productos", productController.all);
 router.get("/productos/:slug", productController.show);
 router.get("/productos/lista/categorias", categoryController.show);
-router.get("/productos/categorias/:categoria", productController.showByCategory);
+router.get(
+  "/productos/categorias/:categoria",
+  productController.showByCategory
+);
 
 // MIDDLEWARE JWT //
 
