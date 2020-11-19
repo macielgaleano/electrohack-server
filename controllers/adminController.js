@@ -10,7 +10,7 @@ module.exports = {
       password: req.body.password,
     });
     admin.save();
-    res.json({});
+    res.json("Admin creado");
   },
   delete: async (req, res) => {
     await Admin.deleteOne({ email: req.body.email });
