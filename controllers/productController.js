@@ -1,5 +1,6 @@
 const db = require("../models/index");
 const Product = require("../models/Product");
+const Order = require("../models/Product");
 const algoliasearch = require("algoliasearch");
 const client = algoliasearch("PW7Q8HCMTL", "4eadc8f72bc64cbf48d67887005cb3c1");
 const index = client.initIndex("test_MOVIES");
@@ -29,8 +30,6 @@ var readOnlyAnonUserPolicy = {
 
 const productController = {
   all: async (req, res) => {
-    console.log(req.query);
-
     if (!req.query) {
       let = await Product.find({});
 
@@ -53,6 +52,41 @@ const productController = {
       res.json(await Product.find({}));
     }
   },
+  groupByDate: async (req, res) => {
+    console.log(await Order.find({}));
+    const FIRST_MONTH = 1;
+    const LAST_MONTH = 12;
+    const MONTHS_ARRAY = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    let TODAY = "2019-11-18T20:27:49.032Z";
+    let YEAR_BEFORE = "2019-11-18T20:27:49.032Z";
+
+    res.json(
+      await Order.aggregate([
+        {
+          $group: {
+            _id: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
+            list: { $push: "$$ROOT" },
+            count: { $sum: 1 },
+          },
+        },
+      ])
+    );
+  },
+
   show: async (req, res) => {
     res.json(await Product.find({ slug: req.params.slug }));
   },
@@ -67,13 +101,9 @@ const productController = {
       if (err) {
         res.status(500).json({ message: "Internal server error" + err });
       } else {
-        console.log("Success");
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
-      err,
-      data
-    ) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
@@ -85,7 +115,6 @@ const productController = {
     });
     form.parse(req, async (err, fields, files) => {
       if (files) {
-        console.log(fields);
         const imagen = "./public/images/" + path.basename(files.imagen.path);
         const fileContent = fs.readFileSync(imagen);
         const params = {
@@ -134,7 +163,8 @@ const productController = {
   },
   delete: async (req, res) => {
     if (req.body.slug) {
-      Product.deleteOne({ slug: req.body.slug });
+      const deletedProduct = await Product.deleteOne({ slug: req.body.slug });
+      console.log(deletedProduct);
       res.status(200).json({ messague: "Producto eliminado" });
     } else {
       res.status(401).json({ status: 401, error: "No existe el producto" });
