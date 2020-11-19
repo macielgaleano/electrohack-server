@@ -73,5 +73,6 @@ router.patch("/api/admin/productos", productController.updateImage);
 // PEDIDOS //
 
 router.put("/api/admin/pedidos", orderController.updateState);
+router.get("/api/admin/pedidos", orderController.showAll);
 
 module.exports = router;

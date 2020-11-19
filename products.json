@@ -3,10 +3,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201136/ppal-desktop-1x.jpg"
     ],
-    "name": "TV LED PANABOX 24D3663",
+    "name": "TV LED PANAVOX 24D3663",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 5450,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
     "outstanding": true,
@@ -16,7 +16,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201156/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANABOX 32 JMM59",
+    "name": "TV SMART PANAVOX 32 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB, VGA.",
     "price": 7550,
     "brand": "",
@@ -29,10 +29,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANABOX 58UHD X51",
+    "name": "TV SMART PANAVOX 58UHD X51",
     "description": "TV monitor LED SMART Ultra HD, HDR, Salida y entrada de audio por bluetooth",
     "price": 21450,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
     "outstanding": true,
@@ -42,10 +42,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201155/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANABOX 65UHD X51",
+    "name": "TV SMART PANAVOX 65UHD X51",
     "description": "TV monitor LED con entradas HDMI, USB, VGA.",
     "price": 30500,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
     "outstanding": true,
@@ -55,10 +55,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANABOX 43 JMM59",
+    "name": "TV SMART PANAVOX 43 JMM59",
     "description": "TV monitor LED SMART con entradas HDMI, USB.",
     "price": 11990,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
     "outstanding": false,
@@ -68,10 +68,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/201157/principal-lg-1x.jpg"
     ],
-    "name": "TV SMART PANABOX 50UHD X51",
+    "name": "TV SMART PANAVOX 50UHD X51",
     "description": "TV monitor LED SMART Ultra HD con entradas HDR, Audio Bluetooth.",
     "price": 18350,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
     "outstanding": false,
@@ -185,7 +185,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31674/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK HP 14-CM0132LA",
+    "name": "NOTEBOOK HP 14-CM0132LA",
     "description": "Procesador AMD E2-9000, Disco duro 1TB, 4GB RAM, Windows 10",
     "price": 16950,
     "brand": "HP",
@@ -198,7 +198,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31659/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK LENOVO IDEAPAD S145-15IGM 500GB",
+    "name": "NOTEBOOK LENOVO IDEAPAD S145-15IGM 500GB",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 18890,
     "brand": "LENOVO",
@@ -211,7 +211,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31662/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ACER A315-34-C7BT-ES",
+    "name": "NOTEBOOK ACER A315-34-C7BT-ES",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 19250,
     "brand": "ACER",
@@ -224,7 +224,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31664/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ASUS X543MA-GQ443T",
+    "name": "NOTEBOOK ASUS X543MA-GQ443T",
     "description": "Procesador INTEL Celeron, Disco duro HDD 512GB, 4GB RAM, Windows 10",
     "price": 21495,
     "brand": "ASUS",
@@ -237,7 +237,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31675/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ASUS X509JA-BR638T",
+    "name": "NOTEBOOK ASUS X509JA-BR638T",
     "description": "Procesador INTEL CORE I3, Disco duro SSD 128, 4GB RAM, Windows 10",
     "price": 25785,
     "brand": "ASUS",
@@ -250,7 +250,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31665/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ASUS X543UA-GO3148T",
+    "name": "NOTEBOOK ASUS X543UA-GO3148T",
     "description": "Procesador INTEL CORE I3, Disco duro HDD 1TB, 4GB RAM, Windows 10",
     "price": 29850,
     "brand": "ASUS",
@@ -263,7 +263,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31663/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ACER A315-56-38-EY",
+    "name": "NOTEBOOK ACER A315-56-38-EY",
     "description": "Procesador INTEL CORE I3, Disco duro HDD 1TB, 4GB RAM, Windows 10",
     "price": 29990,
     "brand": "ACER",
@@ -276,7 +276,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31669/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK ACER A315-56-50-9T-ES",
+    "name": "NOTEBOOK ACER A315-56-50-9T-ES",
     "description": "Procesador INTEL CORE I5, Disco duro SDD 256GB, 8GB RAM, Windows 10",
     "price": 35745,
     "brand": "ACER",
@@ -289,7 +289,7 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/31667/principal-lg-1x.jpg"
     ],
-    "name": "NOTEBOOCK HP 15-DA0012LA",
+    "name": "NOTEBOOK HP 15-DA0012LA",
     "description": "Procesador INTEL CORE I7, Disco duro HDD 1TB, 8GB RAM, Windows 10",
     "price": 54250,
     "brand": "HP",
@@ -302,10 +302,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80447/principal2-lg-1x.jpg"
     ],
-    "name": "MICROONDAS PANABOX EXPRESS 25N",
+    "name": "MICROONDAS PANAVOX EXPRESS 25N",
     "description": "Digital con 11 niveles de potencia",
     "price": 3260,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Cocina",
     "outstanding": true,
@@ -315,10 +315,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80446/principal-lg-1x.jpg"
     ],
-    "name": "MICROONDAS PANABOX INOX 25",
+    "name": "MICROONDAS PANAVOX INOX 25",
     "description": "Digital, acero inoxidable con 5 niveles de potencia",
     "price": 3695,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Cocina",
     "outstanding": true,
@@ -328,10 +328,10 @@
     "pictures": [
       "https://api.carlosgutierrez.com.uy/fotos/fotos/80524/principal-lg-1x.jpg"
     ],
-    "name": "HORNO ELECTRICO PANABOX INOX 35",
+    "name": "HORNO ELECTRICO PANAVOX INOX 35",
     "description": "Grill, timer de 90 miniutos",
     "price": 2395,
-    "brand": "PANABOX",
+    "brand": "PANAVOX",
     "stock": 100,
     "category": "Cocina",
     "outstanding": true,
