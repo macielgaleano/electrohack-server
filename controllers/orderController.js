@@ -38,7 +38,6 @@ module.exports = {
 
   showAll: async (req, res) => {
     const orders = await Order.find({}).populate("user");
-    console.log("user", orders[0]);
     return res.json(orders);
   },
 };

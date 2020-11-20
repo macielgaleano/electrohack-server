@@ -9,7 +9,7 @@
     "brand": "PANAVOX",
     "stock": 100,
     "category": "Televisores",
-    "outstanding": true,
+    "outstanding": false,
     "slug": ""
   },
   {
