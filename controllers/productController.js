@@ -31,13 +31,13 @@ var readOnlyAnonUserPolicy = {
 const productController = {
   all: async (req, res) => {
     if (!req.query) {
-      let = await Product.find({});
+      let = await Product.find({}).populate("category");
 
       res.json(products);
     } else if (req.query.outstading === "false") {
-      res.json(await Product.find({ outstanding: false }));
+      res.json(await Product.find({ outstanding: false }).populate("category"));
     } else if (req.query.outstading === "true") {
-      res.json(await Product.find({ outstanding: true }));
+      res.json(await Product.find({ outstanding: true }).populate("category"));
     }
 
     if (req.query.brand) {
@@ -103,7 +103,10 @@ const productController = {
       } else {
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
+      err,
+      data
+    ) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
