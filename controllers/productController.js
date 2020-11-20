@@ -31,7 +31,7 @@ var readOnlyAnonUserPolicy = {
 const productController = {
   all: async (req, res) => {
     if (!req.query) {
-      let = await Product.find({}).populate("category");
+      let products = await Product.find({}).populate("category");
 
       res.json(products);
     } else if (req.query.outstading === "false") {
