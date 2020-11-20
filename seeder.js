@@ -26,7 +26,23 @@ const seeder = {
       email: "root@gmail.com",
       password: "1234",
     });
+    const adminUser1 = new Admin({
+      firstname: "root1",
+      lastname: "root1",
+      active: true,
+      email: "root1@gmail.com",
+      password: "1234",
+    });
+    const adminUser2 = new Admin({
+      firstname: "root2",
+      lastname: "root2",
+      active: true,
+      email: "root2@gmail.com",
+      password: "1234",
+    });
     adminUser.save();
+    adminUser1.save();
+    adminUser2.save();
 
     let products = productsJson;
 
