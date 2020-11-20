@@ -5,6 +5,7 @@ module.exports = {
     let category = new Category({
       name: req.body.name,
     });
+    console.log(req.body);
     category.save();
     res.json({});
   },
