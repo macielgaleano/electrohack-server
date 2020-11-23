@@ -9,7 +9,7 @@ module.exports = {
       email: req.body.email,
       password: req.body.password,
     });
-    console.log(admin);
+
     admin.save();
     res.json("Admin creado");
   },

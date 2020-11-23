@@ -167,7 +167,7 @@ const productController = {
   delete: async (req, res) => {
     if (req.body.slug) {
       const deletedProduct = await Product.deleteOne({ slug: req.body.slug });
-      console.log(deletedProduct);
+
       res.status(200).json({ messague: "Producto eliminado" });
     } else {
       res.status(401).json({ status: 401, error: "No existe el producto" });

@@ -4,7 +4,7 @@ module.exports = {
   isAdmin: async (req, res, next) => {
     if (req.user.id) {
       const admin = await Admin.findById(req.user.id);
-      console.log("admin", req.user.id);
+
       if (admin.active) {
         next();
       } else {

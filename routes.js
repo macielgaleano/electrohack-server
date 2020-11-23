@@ -65,8 +65,8 @@ router.get("/api/admin", adminController.show);
 
 //ADMIN CATEGORIAS
 router.post("/api/admin/categorias", categoryController.store);
-router.delete("api/admin/categorias", categoryController.delete);
-router.put("api/admin/categorias", categoryController.update);
+router.delete("/api/admin/categorias", categoryController.delete);
+router.put("/api/admin/categorias", categoryController.update);
 
 //PRODUCTOS //
 
