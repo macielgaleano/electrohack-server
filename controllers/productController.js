@@ -103,10 +103,7 @@ const productController = {
       } else {
       }
     });
-    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (
-      err,
-      data
-    ) {
+    s3.createBucket({ Bucket: process.env.AWS_BUCKET_NAME }, function (err, data) {
       if (err) res.status(500).json({ message: "Internal server error" + err });
       else console.log("Bucket Created Successfully", data.Location);
     });
@@ -149,7 +146,7 @@ const productController = {
       category,
       outstanding,
     } = req.body;
-    Product.updateOne(
+    let product = await Product.findOne(
       { name: name },
       {
         name: name,
@@ -161,8 +158,19 @@ const productController = {
         category: category,
         outstanding: outstanding,
       }
-    );
-    res.json({ messague: "Datos actualizados" });
+    ).exec((el, err) => {
+      if (el) {
+        res.json({ messague: "Datos actualizados", data: el });
+      } else {
+        res.status(500).json({ status: 500, messague: "Internal error" });
+      }
+      if (err) {
+        res.json({ message: "Bad request", error: err });
+      }
+    });
+    if (!product) {
+      res.json({ messague: "El producto no existe o fue modificado" });
+    }
   },
   delete: async (req, res) => {
     if (req.body.slug) {
