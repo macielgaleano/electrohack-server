@@ -5,9 +5,8 @@ module.exports = {
     let category = new Category({
       name: req.body.name,
     });
-
     category.save();
-    res.json({});
+    res.json({ Exitoso: "Categoria creada correctamente" });
   },
   show: async (req, res) => {
     const categories = await Category.find({});
