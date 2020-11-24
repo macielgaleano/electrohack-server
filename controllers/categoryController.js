@@ -1,12 +1,20 @@
 const Category = require("../models/Category");
 
 module.exports = {
-  store: (req, res) => {
-    let category = new Category({
-      name: req.body.name,
-    });
-    category.save();
-    res.json({ Exitoso: "Categoria creada correctamente", category: category });
+  store: async (req, res) => {
+    const sercheadCategory = await Category.findOne({ name: req.body.name });
+    if (!sercheadCategory) {
+      let category = new Category({
+        name: req.body.name,
+      });
+      category.save();
+      res.json({
+        Message: "Categoria creada correctamente",
+        category: category,
+      });
+    } else {
+      res.json({ Message: "La categoría ingresada ya existe" });
+    }
   },
   show: async (req, res) => {
     const categories = await Category.find({});
