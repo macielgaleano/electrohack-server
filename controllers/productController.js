@@ -146,29 +146,19 @@ const productController = {
       category,
       outstanding,
     } = req.body;
-    let product = await Product.findOne(
-      { name: name },
-      {
-        name: name,
-        description: description,
-        price: price,
-        brand: brand,
-        pictures: pictures,
-        stock: stock,
-        category: category,
-        outstanding: outstanding,
-      }
-    ).exec((el, err) => {
-      if (el) {
-        res.json({ messague: "Datos actualizados", data: el });
-      } else {
-        res.status(500).json({ status: 500, messague: "Internal error" });
-      }
-      if (err) {
-        res.json({ message: "Bad request", error: err });
-      }
-    });
-    if (!product) {
+    let product = await Product.findOne({ name: name });
+    if (await product) {
+      product.name = name;
+      product.description = description;
+      product.price = price;
+      product.brand = brand;
+      product.pictures = pictures;
+      product.stock = stock;
+      product.category = category;
+      product.outstanding = outstanding;
+      product.save();
+      res.json("El producto fue actualziado correctamente");
+    } else {
       res.json({ messague: "El producto no existe o fue modificado" });
     }
   },
