@@ -18,7 +18,7 @@ module.exports = {
     res.json("Categoría eliminada");
   },
   update: async (req, res) => {
-    const category = await Category.findOneAndUpdate(
+    await Category.findOneAndUpdate(
       { name: req.body.nameToSearch },
       {
         name: req.body.newCategoryName,
