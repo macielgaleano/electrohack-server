@@ -31,7 +31,7 @@ module.exports = {
 
   update: async (req, res) => {
     let { firstname, lastname, email } = req.body;
-    let admin = await Admin.findOne({ id: _id });
+    let admin = await Admin.findOne({ id: req.body.id });
     if (await admin) {
       admin.firstname = firstname;
       admin.lastname = lastname;
