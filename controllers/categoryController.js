@@ -9,11 +9,11 @@ module.exports = {
       });
       category.save();
       res.json({
-        Message: "Categoria creada correctamente",
+        message: "Categoria creada correctamente",
         category: category,
       });
     } else {
-      res.json({ Message: "La categoría ingresada ya existe" });
+      res.json({ message: "La categoría ingresada ya existe." });
     }
   },
   show: async (req, res) => {
@@ -22,16 +22,24 @@ module.exports = {
   },
   delete: async (req, res) => {
     await Category.deleteOne({ name: req.body.name });
-    res.json("Categoría eliminada");
+    res.json("Categoría eliminada.");
   },
   update: async (req, res) => {
-    await Category.findOneAndUpdate(
-      { name: req.body.nameToSearch },
-      {
-        name: req.body.newCategoryName,
-      }
-    );
+    const sercheadCategory = await Category.findOne({ name: req.body.name });
+    if (!sercheadCategory) {
+      await Category.findOneAndUpdate(
+        { name: req.body.nameToSearch },
+        {
+          name: req.body.newCategoryName,
+        }
+      );
 
-    res.json("Categoría actualizada");
+      res.json({ message: "Categoría actualizada." });
+    } else {
+      res.json({
+        message:
+          "El nombre indroducido ya existe, no se puede actualizar la categoría.",
+      });
+    }
   },
 };
