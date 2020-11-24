@@ -25,8 +25,11 @@ module.exports = {
     res.json("Categoría eliminada.");
   },
   update: async (req, res) => {
-    const sercheadCategory = await Category.findOne({ name: req.body.name });
-    if (!sercheadCategory) {
+    const searchedCategory = await Category.findOne({
+      name: req.body.nameToSearch,
+    });
+    console.log(searchedCategory);
+    if (!searchedCategory) {
       await Category.findOneAndUpdate(
         { name: req.body.nameToSearch },
         {
