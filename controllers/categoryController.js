@@ -22,13 +22,12 @@ module.exports = {
   },
   delete: async (req, res) => {
     await Category.deleteOne({ name: req.body.name });
-    res.json("Categoría eliminada.");
+    res.json({ message: "Categoría eliminada." });
   },
   update: async (req, res) => {
     const searchedCategory = await Category.findOne({
-      name: req.body.nameToSearch,
+      name: req.body.newCategoryName,
     });
-    console.log(searchedCategory);
     if (!searchedCategory) {
       await Category.findOneAndUpdate(
         { name: req.body.nameToSearch },
