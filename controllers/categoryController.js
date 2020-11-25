@@ -9,7 +9,7 @@ module.exports = {
       });
       category.save();
       res.json({
-        message: "Categoria creada correctamente",
+        message: "Categoria creada correctamente.",
         category: category,
       });
     } else {
