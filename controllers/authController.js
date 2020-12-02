@@ -29,13 +29,11 @@ module.exports = {
       );
       newUser.tokens.push(token);
       newUser.save();
-      res
-        .status(200)
-        .json({
-          user: newUser,
-          token: token,
-          Exitoso: "Usuario creado correctamente",
-        });
+      res.status(200).json({
+        user: newUser,
+        token: token,
+        Exitoso: "Usuario creado correctamente",
+      });
     } else {
       res.status(200).json({ Error: "El usuario ya existe" });
     }

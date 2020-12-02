@@ -8,7 +8,7 @@
     "price": 5450,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": false,
     "slug": ""
   },
@@ -21,7 +21,7 @@
     "price": 7550,
     "brand": "",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -34,7 +34,7 @@
     "price": 21450,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -47,7 +47,7 @@
     "price": 30500,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -60,7 +60,7 @@
     "price": 11990,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": false,
     "slug": ""
   },
@@ -73,7 +73,7 @@
     "price": 18350,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Televisores",
+    "category": "Navidad",
     "outstanding": false,
     "slug": ""
   },
@@ -86,7 +86,7 @@
     "price": 5250,
     "brand": "HUAWEI",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -99,7 +99,7 @@
     "price": 5790,
     "brand": "MOTOROLA",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -112,7 +112,7 @@
     "price": 6250,
     "brand": "LG",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -125,7 +125,7 @@
     "price": 8290,
     "brand": "XIAOMI",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -138,7 +138,7 @@
     "price": 14950,
     "brand": "XIAOMI",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -151,7 +151,7 @@
     "price": 15350,
     "brand": "HUAWEI",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": false,
     "slug": ""
   },
@@ -164,7 +164,7 @@
     "price": 16450,
     "brand": "MOTOROLA",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": false,
     "slug": ""
   },
@@ -177,7 +177,7 @@
     "price": 36990,
     "brand": "APPLE",
     "stock": 100,
-    "category": "Celulares",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -190,7 +190,7 @@
     "price": 16950,
     "brand": "HP",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -203,7 +203,7 @@
     "price": 18890,
     "brand": "LENOVO",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -216,7 +216,7 @@
     "price": 19250,
     "brand": "ACER",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -229,7 +229,7 @@
     "price": 21495,
     "brand": "ASUS",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -242,7 +242,7 @@
     "price": 25785,
     "brand": "ASUS",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -255,7 +255,7 @@
     "price": 29850,
     "brand": "ASUS",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -268,7 +268,7 @@
     "price": 29990,
     "brand": "ACER",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -281,7 +281,7 @@
     "price": 35745,
     "brand": "ACER",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -294,7 +294,7 @@
     "price": 54250,
     "brand": "HP",
     "stock": 100,
-    "category": "Computadoras",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -307,7 +307,7 @@
     "price": 3260,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -320,7 +320,7 @@
     "price": 3695,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -333,7 +333,7 @@
     "price": 2395,
     "brand": "PANAVOX",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -346,7 +346,7 @@
     "price": 3395,
     "brand": "BRONX",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -359,7 +359,7 @@
     "price": 5160,
     "brand": "BRONX",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   },
@@ -372,7 +372,7 @@
     "price": 4250,
     "brand": "MONDIAL",
     "stock": 100,
-    "category": "Cocina",
+    "category": "Navidad",
     "outstanding": true,
     "slug": ""
   }
